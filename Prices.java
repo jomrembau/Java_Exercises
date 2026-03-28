@@ -22,11 +22,31 @@ public class Prices {
         prices[2][2] = 9.49;
         prices[2][3] = 9.99;
         prices[2][4] = 10.99;
+        
 
-        System.out.println("\tBaking " + Arrays.toString(prices[0]));
-        System.out.println("\tBeverage " + Arrays.toString(prices[1]));
-        System.out.println("\tCereals " + Arrays.toString(prices[2]));
+        for (int i = 0; i < prices.length; i++) {
 
+            switch (i) {
+                case 0:
+                    System.out.print("\tBaking: ");
+                    break;
+                
+                case 1:
+                    System.out.print("\tBeverage: ");
+                    break;
+                
+                case 2:
+                    System.out.print("\tCereals ");
+                    break;
+            
+                default:
+                    break;
+            }
+            for (int j = 0; j < prices[i].length; j++) {
+                System.out.print(prices[i][j] + " ");
+            }
+            System.out.println("\n");
+        }
 
     }
 }
